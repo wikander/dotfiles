@@ -1,0 +1,12 @@
+# set default so that only the current branch is pushed 
+git config --global push.default simple
+
+# set default so that you avoid unnecessary commits
+git config --global branch.autosetuprebase always 
+
+git config --global color.ui true
+git config --global color.status auto
+git config --global color.branch auto 
+
+git config --global merge.tool diffmerge
+git config --global core.editor emacs
