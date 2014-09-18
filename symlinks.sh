@@ -10,7 +10,8 @@ ln -s /export/jboss7_installations/default-node/standalone/deployments ~/deploym
 ln -s ~/dotfiles/maxm/maxm-standalone.sh /export/jboss7_installations/default-node/bin/
 
 # standalone-maxm.xml configurations. DataSources etc.
-ln -s ~/dotfiles/maxm/standalone-maxm.xml /export/jboss7_installations/default-node/standalone/configuration
+ln -s ~/dotfiles/maxm/standalone-maxm.xml /export/jboss7_installations/default-node/standalone/configuration/standalone-maxm.xml
+## Sys ## ln -s ~/dotfiles/maxm/standalone-maxm-sys.xml /export/jboss7_installations/default-node/standalone/configuration/standalone-maxm.xml
 
 ln -s ~/Documents/.dotfiles/.profile ~/.profile
 ln -s ~/Documents/dotfiles/zsh/.zshrc ~/.zshrc
@@ -21,6 +22,10 @@ ln -s /Library/Projects/Linda/devops/development/scripts/cleandev.sh /usr/local/
 ln -s ~/dotfiles/maxm/start-jboss.sh /usr/local/bin/startJboss
 ln -s ~/dotfiles/maxm/maven-install-no-test.sh /usr/local/bin/mcint
 ln -s ~/dotfiles/maxm/maven-install.sh /usr/local/bin/mcit
+ln -s ~/dotfiles/maxm/maven-acc-test.sh /usr/local/bin/macc
+ln -s ~/dotfiles/maxm/maven-acc-build.sh /usr/local/bin/macc-build
+ln -s ~/dotfiles/maxm/start-fitnesse-pcexport.sh /usr/local/bin/startFitnessePcexport
+ln -s ~/dotfiles/maxm/kill-fitnesse-server.sh /usr/local/bin/killFitnesseServer
 
 ln -s ~/dotfiles/bin/todo.sh /usr/local/bin/todo
 
