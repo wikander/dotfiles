@@ -1,0 +1,18 @@
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+# 
+pcexport-admin/overlays/
+pcexport-admin2/overlays/
+maxm/hidden/*
+! maxm/hidden/.gitkeep
+
