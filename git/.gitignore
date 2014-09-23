@@ -12,7 +12,7 @@ target/
 
 # 
 pcexport-admin/overlays/
-pcexport-admin2/overlays/
+pcexport-admin2/overlays/.gitignore
 maxm/hidden/*
-! maxm/hidden/.gitkeep
+!maxm/hidden/.gitkeep
 
