@@ -14,6 +14,11 @@ target/
 pcexport-admin/overlays/
 pcexport-admin2/overlays/
 .gitignore
-maxm/hidden/*
-!maxm/hidden/.gitkeep
+
+# hidden directory
+hidden-git/
+!hidden-git/.gitkeep
+
+# Groovy
+out/
 
