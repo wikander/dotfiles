@@ -1,0 +1,3 @@
+groovy formatXmlFiles.groovy /Library/Projects/output/LIN-7030-test/old/064e0af9-1d7e-4944-80b1-b81e5eb4d6b4/ /Library/Projects/output/LIN-7030-test/new/ff480a32-7eeb-4c7b-b2fa-ecb10c14b689/
+
+groovy compareFiles.groovy /Library/Projects/output/LIN-7030-test/old/064e0af9-1d7e-4944-80b1-b81e5eb4d6b4/sorted /Library/Projects/output/LIN-7030-test/new/ff480a32-7eeb-4c7b-b2fa-ecb10c14b689/sorted /Library/Projects/output/LIN-7030-test/res.txt

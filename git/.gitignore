@@ -10,9 +10,10 @@
 log/
 target/
 
+
+overlays/
+
 # 
-pcexport-admin/overlays/
-pcexport-admin2/overlays/
 .gitignore
 
 # hidden directory

@@ -6,3 +6,5 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 alias ls='ls -lAh'
+alias mysqladmin=/usr/local/mysql/bin/mysqladmin
+alias mysql=/usr/local/mysql/bin/mysql
