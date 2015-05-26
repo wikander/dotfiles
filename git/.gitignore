@@ -1,5 +1,5 @@
 # Intellij
-.idea/
+.idea/**
 *.iml
 *.iws
 
@@ -22,4 +22,16 @@ hidden-git/
 
 # Groovy
 out/
+
+bower_components/
+node_modules/
+
+
+# Temporary
+pcexport-server/src/main/java/se/maxm/pce/api/
+
+phantomjs/grab-gui/output/**
+maxm/postman/**
+
+
 

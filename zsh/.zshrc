@@ -80,3 +80,5 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/dotfiles/zsh/.profile
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -6,17 +6,17 @@
 # Set up your own config methods to be used as arguments in deploydev.sh. See "example()" for instance.
 
 example() {
-	local SRC_DIR=/code/projects/team
+	local SRC_DIR=/Library/Projects/application
 	 
 	# This artifact will be installed from the maven repo if it is not already deployed
     jbFetch InstrumentBackend 2.0.29
 
 	# This artifact will be linked from the target dir if it is not already deployed
-	# The script tries to find the artifact "PMLBackend" somewhere in the file tree based at "/code/projects/team PMLBackend"
+	# The script tries to find the artifact "PMLBackend" somewhere in the file tree based at "/Library/Projects/application PMLBackend"
     jbDeploy $SRC_DIR PMLBackend
 
 	# This artifact will be linked from the target dir and is always redployed
-	# The script tries to find the artifact "WebCounseling" somewhere in the file tree based at "/code/projects/team PMLBackend"
+	# The script tries to find the artifact "WebCounseling" somewhere in the file tree based at "/Library/Projects/application PMLBackend"
     jbRedeploy $SRC_DIR WebCounseling	
 }
 
@@ -37,35 +37,55 @@ mts() {
 	jbRedeploy $SRC_DIR mts-server	
 }
 
-intApp() {
-	local SRC_DIR=/Library/Projects/pmlweb
 
-	jbRedeploy $SRC_DIR PMLBackend
+
+wf_intApp() {
+	local SRC_DIR=/Library/Projects/pmlweb-devbranch-wildfly
+
+	deploy $SRC_DIR PMLBackend
 	jbRedeploy $SRC_DIR InternalApp
-	jbRedeploy $SRC_DIR InstrumentBackend
-	jbRedeploy $SRC_DIR VersionsApp
-}
-
-intAppMock() {
-	local SRC_DIR=/Library/Projects/pmlweb
-
-	jbRedeploy $SRC_DIR PMLBackend
-	jbRedeploy $SRC_DIR InternalApp
+	deploy $SRC_DIR InstrumentBackend
+	deploy $SRC_DIR VersionsApp
 	jbRedeploy $SRC_DIR MTSMock
-	jbDeploy $SRC_DIR InstrumentBackend
-	jbDeploy $SRC_DIR VersionsApp
 }
 
-deployBasicPml() {
-  local SRC_DIR=/Library/Projects/pmlweb
+wf_pml() {
+  local SRC_DIR=/Library/Projects/pmlweb-devbranch-wildfly
 
   deploy $SRC_DIR PMLBackend
   deploy $SRC_DIR InstrumentBackend
-  deploy $SRC_DIR PMLApp
+  jbRedeploy $SRC_DIR PMLApp
+}
+
+intApp() {
+	local SRC_DIR=/Library/Projects/Linda
+
+	deploy $SRC_DIR PMLBackend
+	jbRedeploy $SRC_DIR InternalApp
+	deploy $SRC_DIR InstrumentBackend
+	deploy $SRC_DIR VersionsApp
+}
+
+intAppMock() {
+	local SRC_DIR=/Library/Projects/Linda
+
+	deploy $SRC_DIR PMLBackend
+	jbRedeploy $SRC_DIR InternalApp
+	deploy $SRC_DIR MTSMock
+	deploy $SRC_DIR InstrumentBackend
+	deploy $SRC_DIR VersionsApp
+}
+
+deployBasicPml() {
+  local SRC_DIR=/Library/Projects/Linda
+
+  deploy $SRC_DIR PMLBackend
+  deploy $SRC_DIR InstrumentBackend
+  jbRedeploy $SRC_DIR PMLApp
 }
 
 styleTemplateInternalApp() {
-  jbFetch StyleTemplateInternalApp 5.0.90
+  jbFetch StyleTemplateInternalApp 5.0.99
 }
 
 eclipsePML() {
@@ -116,7 +136,7 @@ eclipseAll() {
 
 
 deployCounseling() {
-  local SRC_DIR=/Library/Projects/pmlweb
+  local SRC_DIR=/Library/Projects/Linda
   
   redeploy $SRC_DIR PMLBackend
   redeploy $SRC_DIR InstrumentBackend
@@ -125,7 +145,7 @@ deployCounseling() {
 }
 
 deployWebCounseling() {
-  local SRC_DIR=/Library/Projects/pmlweb
+  local SRC_DIR=/Library/Projects/Linda
   fetch WebCounselingStatic 3.0.31   
   deploy $SRC_DIR PMLBackend
   deploy $SRC_DIR PublicWebBackend
