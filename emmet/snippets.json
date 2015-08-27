@@ -1,0 +1,15 @@
+{
+  "html": {
+    "abbreviations": {
+        "maxm-logo": "div.header-logo",
+        "maxm-appname": "a.navbar-brand.hidden-xs[accesskey='.']",
+        "maxm-menu": "div#navbar.collpase.navbar-collapse.navbar-container-left>ul.nav.navbar-nav",
+        "maxm-dropdown-menu-item": "li.dropdown>a.dropdowntoggle[data-toggle='dropdown' rol='button' aria-expanded='false' accesskey='']+ul.dropdown-menu[role='menu']>li>a[href='$' accesskey='$']{$}*6",
+        "maxm-dropdown-menu-right-item": "li.dropdown>a.dropdowntoggle[data-toggle='dropdown' rol='button' aria-expanded='false' accesskey='']+ul.dropdown-menu.dropdown-menu-right[role='menu']>li>a[href='$' accesskey='$']{$}*6",
+        "maxm-dropdown-settings-menu-item": "li.dropdown.settings-dropdown>a.dropdowntoggle[data-toggle='dropdown' rol='button' aria-expanded='false' accesskey='']+ul.dropdown-menu.dropdown-menu-right[role='menu']>li>a[href='$' accesskey='$']{$}*6",
+        "maxm-menu-item": "li>a[accesskey='']",
+        "maxm-info-right": "div.header-infotext-container>ul.nav.navbar-nav>maxm-dropdown-menu-item",
+        "maxm-capture": "div[data-capture='$0']"
+    }
+  }
+}

@@ -6,7 +6,7 @@ ln -s /export/wildfly_installations/local/standalone/deployments ~/deployments
 
 ## Dotfiles used in context
 # maxm-standalone tweaked for start_jboss alias
-rm /export/wildfly_installations/local/bin/maxm-standalone.sh 
+rm /export/wildfly_installations/local/bin/maxm-standalone.sh
 ln -s ~/dotfiles/maxm/maxm-standalone.sh /export/wildfly_installations/local/bin
 
 
@@ -34,8 +34,9 @@ ln -s ~/dotfiles/maxm/kill-fitnesse-server.sh /usr/local/bin/killFitnesseServer
 ln -s ~/dotfiles/maxm/new_kun_db.sh /usr/local/bin/newKundDb
 
 ln -s ~/dotfiles/bin/todo.sh /usr/local/bin/todo
+ln -s ~/dotfiles/bin/clear-desktop.sh /usr/local/bin/clearDesk
+ln -s ~/dotfiles/bin/unclear-desktop.sh /usr/local/bin/unClearDesk
 
 ln -s ~/dotfiles/git/.gitignore ~/dotfiles/
 
 ln -s ~/dotfiles/sublime/.jsbeautifyrc ~
-

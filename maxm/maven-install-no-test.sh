@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "mvn clean install NO TEST"
-mvn clean install -P MaxM-local -Dmaven.test.skip=true
+mvn clean install -Plocal-server -Dmaven.test.skip=true
