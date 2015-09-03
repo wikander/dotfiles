@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "mvn clean install"
-mvn clean install -Plocal-server
+mvn clean install

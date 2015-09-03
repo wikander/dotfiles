@@ -1,3 +1,4 @@
+
 # Sets reasonable OS X defaults.
 #
 # Or, in other words, set shit how I like in OS X.
@@ -6,6 +7,8 @@
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 #
 # Run ./set-defaults.sh and you'll be good to go.
+
+# See http://www.defaults-write.com/ for more.
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -20,6 +23,7 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 chflags nohidden ~/Library
 
 # Set a really fast key repeat.
+defaults write NSGlobalDomain InitialKeyRepeat -int 40
 defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
@@ -41,4 +45,8 @@ defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.Web
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Screenshot location
-defaults write com.apple.screencapture location ~/Screenshots
+mkdir ~/Screenshots
+defaults write com.apple.screencapture location !$
+killall SystemUIServer
+
+defaults write com.apple.finder AppleShowAllFiles -bool true
