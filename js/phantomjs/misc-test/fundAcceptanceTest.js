@@ -1,20 +1,14 @@
-var casper = require('casper').create();
-var pageURL = 'http://172.25.7.195:8080/external/fund.html?isin=VGG3193X1015&orgNr=202100-6255';
+var pageURL = 'http://axsaimapprd.int.axstores.se:9000/#/';
+casper.test.begin('Aim is alive and we are able to login.', 2, function suite(test) {
+  casper.start(pageURL, function() {
+    this.capture('login-page.png');
 
-casper.start(pageURL, function() {
-  this.capture('fund-screenshot.png');
+    this.test.assertHttpStatus(200, 'AIM is alive!');
 
-  this.test.assertHttpStatus(200, 'Fund page is up.');
+    this.test.assertTitle('AIM', 'The title is correct.');
+  });
 
-  this.test.assertTitle('Max Matthiessen', 'Title is the one expected.');
-
-  this.test.assertEval(function() {
-    var timeSpanLink = document.querySelector('ul#time-span-tabs > li.active > a');
-    return timeSpanLink.getAttribute('href') === "#THREE_MONTHS";
-  }, 'Three months is the default active tab.');
-});
-
-casper.run(function() {
-    this.test.done(3);
-    this.test.renderResults(true);
+  casper.run(function() {
+    test.done();
+  });
 });
