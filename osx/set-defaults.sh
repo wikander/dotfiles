@@ -24,8 +24,8 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 chflags nohidden ~/Library
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain InitialKeyRepeat -int 40
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -50,4 +50,6 @@ mkdir ~/Screenshots
 defaults write com.apple.screencapture location !$
 killall SystemUIServer
 
-defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write -g NSScrollViewRubberbanding -int 0
+
+defaults write com.apple.finder AppleShowAllFiles YES

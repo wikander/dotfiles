@@ -4,6 +4,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export BROWSERSTACK_USERNAME=simonwikander1
 export BROWSERSTACK_KEY=22vqTtzrp16xHqaD15gX
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -23,7 +26,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -48,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git at mvn npm osx sublime sudo)
+plugins=(git at mvn npm osx sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,11 +64,11 @@ export PATH="/Users/simwik/.deno/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbi
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='emacs -nw'
+else
+  export EDITOR='emacs -nw'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -91,7 +94,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+<<<<<<< HEAD
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 source ./deno_completions.zsh
 
+=======
+alias md5sum=md5
+
+export NVM_DIR="/Users/simonwikander/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+function tabTitle {
+    echo -ne "\033]0;"$*"\007"
+}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+>>>>>>> c9b537d3e5ff70bf296c041dbff379e16e4f7118

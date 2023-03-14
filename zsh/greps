@@ -1,0 +1,7 @@
+egrep -o 'GET /student/minasidor/tentamen/arkiv\?dl=[0-9]+.* after [0-9]* ms' student-minasidor-2016-09-05.log | egrep -o '[0-9]* ms' | egrep -o '[0-9]+' | sort -nr > gets_ms_09_05.csv
+
+
+cat gets_ms_09_05.csv | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }'
+
+
+afs/kth.se/misc/projects/ite/logs/lpw-2.sys.kth.se/opt/local/lpw/mss-tomcat/logs
