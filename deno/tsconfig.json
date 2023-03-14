@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["esnext"],
+    "module": "esnext",
+    "plugins": [
+      {
+        "name": "typescript-deno-plugin",
+        "enable": true, // default is `true`
+        "importmap": "import_map.json"
+      }
+    ]
+  },
+  "include": ["*.ts"]
+}

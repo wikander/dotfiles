@@ -32,5 +32,7 @@ pcexport-server/src/main/java/se/maxm/pce/api/
 
 phantomjs/grab-gui/output/**
 
-
+.settings
+.project
+.classpath
 
