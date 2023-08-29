@@ -1,0 +1,40 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'JetBrains Mono', 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "njk": "html",
+    "nunjucks": "html",
+    "razor": "html",
+    "aspnetcorerazor": "html"
+  },
+  "html.suggest.html5": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "workbench.colorTheme": "Solarized Light",
+  "debug.toolBarLocation": "docked",
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "prettier.bracketSameLine": true,
+  "[aspnetcorerazor]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "omnisharp.monoPath": "/Library/Frameworks/Mono.framework/Versions/Current",
+  "redhat.telemetry.enabled": false
+}
