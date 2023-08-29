@@ -1,1 +1,38 @@
-./git/.gitignore
+# Intellij
+.idea/**
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+
+overlays/
+
+# 
+.gitignore
+
+# hidden directory
+hidden-git/
+!hidden-git/.gitkeep
+
+# Groovy
+out/
+
+bower_components/
+node_modules/
+
+
+# Temporary
+pcexport-server/src/main/java/se/maxm/pce/api/
+
+phantomjs/grab-gui/output/**
+
+.settings
+.project
+.classpath
+
